@@ -8,18 +8,11 @@ public class LineComparison_Method {
         System.out.println("Welcome to Line Computation program by class method");
 
         LineComparison_Method lineMethods = new LineComparison_Method();
-        double line1Length = lineMethods.lengthOfLine1();
-        double line2Length = lineMethods.lengthOfLine2();
-
-
-        if (line1Length == line2Length) {
-            System.out.println("Lines are Equal");
-        } else {
-            System.out.println("lines are not equal");
-        }
+        lineMethods.lengthOfLine1();
+        lineMethods.lengthOfLine2();
+        lineMethods.compareTo();
     }
-
-        public double lengthOfLine1 () {
+    public double lengthOfLine1 () {
             Scanner s = new Scanner(System.in);
             System.out.println("Enter x1 co-ordinate of line: ");
             int x1 = s.nextInt();
@@ -49,4 +42,13 @@ public class LineComparison_Method {
             System.out.println("length of Line1: " + length_of_Secondline);
             return length_of_Secondline;
         }
+    public void compareTo() {
+        if (length_of_Firstline > length_of_Secondline) {
+            System.out.println("Line1 is greater than line2");
+        } else if (length_of_Firstline < length_of_Secondline) {
+            System.out.println("Line2 is greater than line1");
+        } else {
+            System.out.println("Both Lines are Equal");
+        }
     }
+}
